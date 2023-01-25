@@ -5,14 +5,14 @@ const PLACEHOLDER = placeholder;
 
 
 const Show = ({ show }) => {
-    const poster = show.Poster === "N/A" ? PLACEHOLDER : show.Poster;
+    const poster = show.Poster === "N/A" ? PLACEHOLDER : `https://image.tmdb.org/t/p/w500/${show.backdrop_path}`;
     return (
-      <div className="max-w-screen-">
-        <h2>{show.Title}</h2>
+      <div className="max-w-screen-md">
+        <h2>{show.name}</h2>
         <div>
           <img
             width="200"
-            alt={`The movie titled: ${show.Title}`}
+            alt={`The movie titled: ${show.name}`}
             src={poster}
           />
         </div>
